@@ -10,7 +10,10 @@ img {
 }
 
 :root {
-    --padding-section: 0.5rem
+    --padding-section: 0.5rem;
+    --padding-i: 0.6rem;
+    --light-bg: #eaeaea;
+    --icon-grey: #b1b1b1;
 }
 /* COMMON */
 body {
@@ -24,7 +27,7 @@ body {
 
 .toolbar i {
     margin-left: 1rem;
-    color: #b1b1b1;
+    color: var(--icon-grey);
 }
 .pfp {
     /* Debug */
@@ -85,7 +88,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #eaeaea; 
+    background-color: var(--light-bg); 
 }
 @media screen and (max-width: 991px) {
     .my-info .toolbar {
@@ -119,10 +122,6 @@ body {
 .notification h6 {
     font-weight: 800;
 }
-.activate-notification {
-    
-}
-
 @media screen and (max-width: 991px) {
     .notification {
        display: none;
@@ -131,10 +130,29 @@ body {
 
 /* Research */
 .research {
-    /* Debug */
-    height: 8%;
-    background-color: white; 
-    border: 2px solid black;
+    padding: var(--padding-section);
+    background-color: var(--light-bg); 
+    display: flex;
+    align-items: center;   
+}
+
+.searchbar {
+    background-color: white;
+    padding: var(--padding-i);
+    border: 1px solid lightgrey;
+    width: 100%;
+    margin: 0 auto;
+    color: var(--icon-grey);
+    display: flex;
+    justify-content: flex-start;
+}
+
+.searchbar input {
+    border: none;
+    margin-left: 1rem;
+    font-size: 0.7rem;
+    width: 100%;
+    color: gray;
 }
 @media screen and (max-width: 991px) {
     .research {
