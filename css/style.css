@@ -5,24 +5,32 @@
     box-sizing: border-box;
 }
 
+img {
+    max-width: 100%;
+}
+
 /* COMMON */
 body {
     background-color: aqua;
 }
 
 .toolbar {
-    /* Debug */
-    height: 100%;
-    width: 25%;
-    background-color: gray;
+    display: flex;
+    justify-content: space-between;
 }
 
+.toolbar i {
+    margin-left: 1rem;
+    color: #b1b1b1;
+}
 .pfp {
     /* Debug */
-    border-radius: 50%;
     height: 100%;
-    width: 20%;
-    background-color: gray;
+}
+
+.pfp img {
+    border-radius: 50%;
+    max-width: 30%;
 }
 @media screen and (max-width: 991px) {
     .left-side .pfp {
@@ -33,7 +41,7 @@ body {
 
 /* Container */
 .container {
-    width: 90vw;
+    width: 80vw;
     height: 95vh;
     margin: 2.5vh auto;
     display: flex;
@@ -70,12 +78,11 @@ body {
 }
 /* My Info */
 .my-info {
+    padding: 0.5rem;
     display: flex;
     justify-content: space-between;
-    /* Debug */
-    height: 10%;
-    background-color: red; 
-    border: 2px solid black;
+    align-items: center;
+    background-color: #eaeaea; 
 }
 @media screen and (max-width: 991px) {
     .my-info .toolbar {
@@ -113,6 +120,7 @@ body {
 .chats-list {
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
     /* Debug */
     height: 70%;
     gap: 1rem;
@@ -201,6 +209,7 @@ body {
     padding: 1rem 2rem;
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
     /* Debug */
     height: 80%;
     background-color: red; 
