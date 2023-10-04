@@ -30,13 +30,21 @@ body {
     color: var(--icon-grey);
 }
 .pfp {
-    /* Debug */
     height: 100%;
+    width: 15%;
+    display: flex;
+    align-items: center;
 }
 
-.pfp img {
+
+button {
+    border: none;
+    background: none;
+}
+
+button img {
     border-radius: 50%;
-    max-width: 30%;
+
 }
 @media screen and (max-width: 991px) {
     .left-side .pfp {
@@ -51,8 +59,6 @@ body {
     height: 95vh;
     margin: 2.5vh auto;
     display: flex;
-    /* Debug */
-    background-color: lightcoral;
 }
 
 @media screen and (max-width: 991px) {
@@ -68,12 +74,10 @@ body {
     width: 35%;
     /* Debug */
     height: 100%;
-    background-color: yellow;
-    border: 10px solid black;
 }
 @media screen and (max-width: 991px) {
     .left-side {
-       width: 10%;
+       width: 20%;
     }
 }
 
@@ -89,8 +93,13 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: var(--light-bg); 
+    height: 10%;
 }
 @media screen and (max-width: 991px) {
+    .my-info {
+        height: 15%;
+        padding: 1rem;
+    }
     .my-info .toolbar {
        display: none;
     }
@@ -133,7 +142,8 @@ body {
     padding: var(--padding-section);
     background-color: var(--light-bg); 
     display: flex;
-    align-items: center;   
+    align-items: center;  
+    height: 8%; 
 }
 
 .searchbar {
@@ -165,26 +175,33 @@ body {
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
-    /* Debug */
+    background-color: white;
     height: 70%;
-    gap: 1rem;
 }
-
+@media screen and (max-width: 991px) {
+    .chats-list {
+       height: 85%;
+    }
+}
 /* Single chat */
 .single-chat {
     display: flex;
-    justify-content: space-between;
-    /* Debug */
-    width: 100%;
-    height: calc((100% / 7) - (6rem / 7));
-    background-color: lightblue;
+    justify-content: flex-start;
+    align-items: center;
+    padding: var(--padding-section);
+    border-top: 1px solid var(--light-bg);
+    position: relative;
 }
 
 .chat-preview {
-    /* Debug */
-    height: 100%;
-    width: 50%;
-    background-color: red;
+    text-align: left;
+    font-size: 0.7rem;
+    margin-left: 1rem;
+    
+}
+
+.chat-preview p {
+    color: var(--icon-grey);
 }
 @media screen and (max-width: 991px) {
     .chat-preview {
@@ -193,9 +210,13 @@ body {
 }
 
 .time {
-    /* Debug */
-    width: 20%;
-    background-color: gray;
+    /* width: 10%; */
+    color: var(--icon-grey);
+    font-size: 0.7rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    /* background-color: gray; */
 }
 @media screen and (max-width: 991px) {
     .time {
@@ -209,7 +230,6 @@ body {
     /* Debug */
     height: 100%;
     background-color: lightgray;
-    border: 10px solid black;
     border-left: 0px;
 }
 @media screen and (max-width: 991px) {
@@ -259,6 +279,11 @@ body {
     background-color: red; 
     border: 2px solid black;
 }
+@media screen and (max-width: 991px) {
+    .chat-space {
+        overflow-y: hidden;
+    }
+    }
 
 .message {
     display: flex;
