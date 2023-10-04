@@ -9,6 +9,9 @@ img {
     max-width: 100%;
 }
 
+:root {
+    --padding-section: 0.5rem
+}
 /* COMMON */
 body {
     background-color: aqua;
@@ -59,7 +62,7 @@ body {
 
 /* Left-side */
 .left-side {
-    width: 30%;
+    width: 35%;
     /* Debug */
     height: 100%;
     background-color: yellow;
@@ -92,11 +95,34 @@ body {
 
 /* Notification */
 .notification {
-    /* Debug */
+    padding: var(--padding-section);
     height: 12%;
-    background-color: green; 
-    border: 2px solid black;
+    background-color: #8edafc;
+    display: flex;
+    align-items: center;
+
 }
+
+.notification i {
+    background-color: white;
+    border-radius: 50%;
+    color: #8edafc;
+    padding: 0.6rem;
+    margin-right: 1rem;
+}
+
+.notification a {
+    font-size: 0.7rem;
+    color: #5b879b;
+}
+
+.notification h6 {
+    font-weight: 800;
+}
+.activate-notification {
+    
+}
+
 @media screen and (max-width: 991px) {
     .notification {
        display: none;
@@ -161,7 +187,7 @@ body {
 
 /* Right-side */
 .right-side {
-    width: 70%;
+    width: 65%;
     /* Debug */
     height: 100%;
     background-color: lightgray;
