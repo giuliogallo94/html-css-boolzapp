@@ -31,13 +31,31 @@ body {
 
 }
 
+/* My Info */
 .my-info {
+    display: flex;
+    justify-content: space-between;
     /* Debug */
-   height: 10%;
-   background-color: red; 
-   border: 2px solid black;
+    height: 10%;
+    background-color: red; 
+    border: 2px solid black;
 }
 
+.my-pfp {
+    /* Debug */
+    height: 100%;
+    width: 20%;
+    background-color: gray;
+}
+
+.toolbar {
+    /* Debug */
+    height: 100%;
+    width: 40%;
+    background-color: gray;
+}
+
+/* Notification */
 .notification {
     /* Debug */
     height: 12%;
@@ -45,6 +63,7 @@ body {
     border: 2px solid black;
 }
 
+/* Research */
 .research {
     /* Debug */
     height: 8%;
@@ -52,12 +71,20 @@ body {
     border: 2px solid black;
 }
 
-.chats.list {
+/* Chats list */
+.chats-list {
+    display: flex;
+    flex-direction: column;
     /* Debug */
     height: 70%;
-
+    gap: 1rem;
 }
-
+.single-chat {
+    /* Debug */
+    width: 100%;
+    height: calc((100% / 7) - (6rem / 7));
+    background-color: lightblue;
+}
 /* Right-side */
 .right-side {
     width: 70%;
