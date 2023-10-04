@@ -1,0 +1,38 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* COMMON */
+body {
+    background-color: aqua;
+}
+
+/* BODY */
+
+/* Container */
+.container {
+    width: 90vw;
+    margin: 2.5vh auto;
+    height: 95vh;
+    display: flex;
+    /* Debug */
+    background-color: lightcoral;
+}
+/* Left-side */
+.left-side {
+    width: 30%;
+    /* Debug */
+    height: 100%;
+    background-color: yellow;
+}
+
+/* Right-side */
+.right-side {
+    width: 70%;
+    /* Debug */
+    height: 100%;
+    background-color: lightgray;
+}
