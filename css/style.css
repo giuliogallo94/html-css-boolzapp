@@ -23,6 +23,7 @@ body {
 .toolbar {
     display: flex;
     justify-content: space-between;
+    padding-right: 0.5rem;
 }
 
 .toolbar i {
@@ -36,16 +37,15 @@ body {
     align-items: center;
 }
 
-
 button {
     border: none;
     background: none;
 }
 
-button img {
+a img {
     border-radius: 50%;
-
 }
+
 @media screen and (max-width: 991px) {
     .left-side .pfp {
         width: 100%;
@@ -94,6 +94,10 @@ button img {
     align-items: center;
     background-color: var(--light-bg); 
     height: 10%;
+}
+
+.toolbar button {
+    font-size: 1.2rem;
 }
 @media screen and (max-width: 991px) {
     .my-info {
@@ -190,7 +194,7 @@ button img {
     align-items: center;
     padding: var(--padding-section);
     border-top: 1px solid var(--light-bg);
-    position: relative;
+    position: relative; 
 }
 
 .chat-preview {
