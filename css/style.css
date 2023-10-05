@@ -57,8 +57,29 @@ button {
     height: 100vh;
     width: 100vw;
     background-color: #00968D;
+    padding-top: 20vh;
+    display: flex;
+    flex-direction: column-reverse;
 }
-/* Container */
+
+ @media screen and (max-width: 991px) {
+    .wrapper {
+        display: block;
+        padding-top: 0;
+    }
+} 
+
+.grey-bg {
+    height: 100%;
+    background-color: #d5dbd9;
+}
+@media screen and (max-width: 991px) {
+   .grey-bg {
+    display: none;
+   }
+}
+
+/* App */
 .app {
     position: fixed;
     width: 80%;
@@ -66,10 +87,11 @@ button {
     margin: 2.5vh 10vw;
     display: flex;
     border: 1px solid black;
+    z-index: 999;
 }
 
 @media screen and (max-width: 991px) {
-    .container {
+    .app {
         width: 100vw;
         height: 100vh;
         margin: 0;
@@ -198,6 +220,10 @@ button {
     padding: var(--padding-section);
     border-top: 1px solid var(--light-bg);
     position: relative; 
+}
+
+.single-chat:hover {
+    background-color: #f4f5f5;
 }
 
 .single-chat a {
@@ -337,6 +363,7 @@ button {
 }
 
 .message {
+    position: relative;
     display: flex;
     align-items: flex-start;
     width: 100%;
@@ -361,6 +388,34 @@ button {
     background-color: white;
     border-radius: 1rem;
     padding: var(--padding-i);
+}
+
+.extra-msg {
+    position: absolute;
+    right: 1rem;
+    top: 1.25rem;
+    width: 60%;
+    z-index: 999;
+    font-size: 0.7rem;
+    background-color: white;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--padding-section);
+    text-align: center;
+    color: black;
+}
+
+.message-plus i:active .extra-msg{
+    display: flex;
+}
+
+.extra-msg:hover {
+    display: flex;
+}
+
+.delete {
+    margin-top: 0.5rem;
 }
 
 .message-plus {
