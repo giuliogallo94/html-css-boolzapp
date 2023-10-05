@@ -182,7 +182,8 @@ button {
 }
 @media screen and (max-width: 991px) {
     .chats-list {
-       height: 85%;
+       height: 85%;    
+       /* overflow-y: scroll; */
     }
 }
 /* Single chat */
@@ -250,7 +251,11 @@ button {
     background-color: var(--light-bg); 
     padding: var(--padding-section);
 }
-
+@media screen and (max-width: 991px) {
+    .contact-bar {
+       height: 15%;
+    }
+}
 .pfp-info {
    display: flex;
    justify-content: flex-start;  
@@ -291,13 +296,14 @@ button {
     padding: 1rem 2rem;
     display: flex;
     flex-direction: column;
-    overflow-y: scroll;
     height: 82%;
     background-image: url(../img/mine.jpg);
+    overflow-y: scroll;
+
 }
 @media screen and (max-width: 991px) {
     .chat-space {
-        overflow-y: hidden;
+        height: 77%;
     }
 }
 
@@ -368,6 +374,7 @@ button {
     border: none;
     padding: 1rem;
     color: #6b7376;
+    margin: 0 1rem;
 }
 @media screen and (max-width: 540px) {
     .emoji {
