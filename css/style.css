@@ -201,7 +201,6 @@ button {
 }
 
 .single-chat a {
-    width: 100%;
     text-decoration: none;
 }
 
@@ -211,7 +210,6 @@ button {
 .chat-preview {
     display: flex ;
     flex-direction: column;
-    /* text-align: left; */
     font-size: 0.7rem;
     margin-left: 1rem;
 }
