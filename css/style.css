@@ -86,7 +86,6 @@ button {
     height: 95%;
     margin: 2.5vh 10vw;
     display: flex;
-    border: 1px solid black;
     z-index: 999;
 }
 
@@ -475,6 +474,7 @@ button {
         margin: 0 auto;
     }
 }
+
 .microphone {
     width: 20%;
     height: 100%;
@@ -486,3 +486,8 @@ button {
         display: none;
     }
 }
+
+
+/* .extra-msg li {
+    font-variant: capitalize;
+} */
