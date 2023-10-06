@@ -14,7 +14,22 @@ img {
     --padding-i: 0.6rem;
     --light-bg: #eaeaea;
     --icon-grey: #b1b1b1;
+    --wrapper-bg: #00968D;
+    --grey-bg:  #d5dbd9;
+    --notif-bg: #8edafc;
+    --white-bg: white;
+    --writing-i: #6b7376;
 }
+
+/* @media (prefers-color-scheme: dark) {
+    :root {
+        --padding-section: 0.5rem;
+        --padding-i: 0.6rem;
+        --light-bg: #eaeaea;
+        --icon-grey: #b1b1b1;
+    }
+} */
+
 /* COMMON */
 h3 {
     color: black;
@@ -56,7 +71,7 @@ button {
 .wrapper {
     height: 100vh;
     width: 100vw;
-    background-color: #00968D;
+    background-color: var(--wrapper-bg);
     padding-top: 20vh;
     display: flex;
     flex-direction: column-reverse;
@@ -71,7 +86,7 @@ button {
 
 .grey-bg {
     height: 100%;
-    background-color: #d5dbd9;
+    background-color: var(--grey-bg);
 }
 @media screen and (max-width: 991px) {
    .grey-bg {
@@ -136,16 +151,16 @@ button {
 .notification {
     padding: var(--padding-section);
     height: 12%;
-    background-color: #8edafc;
+    background-color: var(--notif-bg);
     display: flex;
     align-items: center;
 
 }
 
 .notification i {
-    background-color: white;
+    background-color: var(--white-bg);
     border-radius: 50%;
-    color: #8edafc;
+    color: var(--notif-bg);
     padding: 0.6rem;
     margin-right: 1rem;
 }
@@ -174,7 +189,7 @@ button {
 }
 
 .searchbar {
-    background-color: white;
+    background-color: var(--white-bg);
     padding: var(--padding-i);
     border: 1px solid lightgrey;
     width: 100%;
@@ -203,7 +218,7 @@ button {
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
-    background-color: white;
+    background-color: var(--white-bg);
     height: 70%;
 }
 @media screen and (max-width: 991px) {
@@ -396,7 +411,7 @@ button {
     width: 60%;
     z-index: 999;
     font-size: 0.7rem;
-    background-color: white;
+    background-color: var(--white-bg);
     display: none;
     flex-direction: column;
     justify-content: space-between;
@@ -405,7 +420,11 @@ button {
     color: black;
 }
 
-.message-plus i:active .extra-msg{
+.extra-msg a {
+    text-decoration: none;
+    color: black;
+}
+.info-msg:active .extra-msg{
     display: flex;
 }
 
@@ -439,7 +458,7 @@ button {
 }
 
 .writing-space i {
-    color: #6b7376;
+    color: var(--writing-i);
     font-size: 1.5rem;
 }
 
@@ -475,19 +494,19 @@ button {
     }
 }
 
-.microphone {
-    width: 20%;
-    height: 100%;
-    background-color: black;
+.fa-microphone:active {
+    background-color: var(--light-bg);
+    color: red;
+    border: 1px ridge red;
     border-radius: 50%;
-}
-@media screen and (max-width: 540px) {
-    .microphone {
-        display: none;
-    }
+    padding: 0.4rem;
+    box-shadow:  5px  5px 6px red,
+                -5px -5px 6px red,
+                 5px -5px 6px red,
+                -5px  5px 6px red;
+  
 }
 
-
-/* .extra-msg li {
-    font-variant: capitalize;
-} */
+.fa-microphone:active #chat-bar {
+  display: none;
+}
