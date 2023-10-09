@@ -21,14 +21,16 @@ img {
     --writing-i: #6b7376;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     :root {
-        --padding-section: 0.5rem;
-        --padding-i: 0.6rem;
         --light-bg: #eaeaea;
         --icon-grey: #b1b1b1;
     }
-}
+
+    .chat-space {
+        background-image: url(../img/dark.jpg);
+    }
+} */
 
 /* COMMON */
 h3 {
@@ -71,10 +73,7 @@ button {
 .wrapper {
     height: 100vh;
     width: 100vw;
-    background-color: var(--wrapper-bg);
-    padding-top: 20vh;
-    display: flex;
-    flex-direction: column-reverse;
+    background-image: linear-gradient(to bottom, var(--wrapper-bg) 0px, var(--wrapper-bg) 15vh, var(--grey-bg) 15vh, var(--grey-bg) 100%);
 }
 
  @media screen and (max-width: 991px) {
@@ -97,11 +96,10 @@ button {
 /* App */
 .app {
     position: fixed;
+    margin: 2.5vh 10vw;
     width: 80%;
     height: 95%;
-    margin: 2.5vh 10vw;
     display: flex;
-    z-index: 999;
 }
 
 @media screen and (max-width: 991px) {
