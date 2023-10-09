@@ -21,14 +21,14 @@ img {
     --writing-i: #6b7376;
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
     :root {
         --padding-section: 0.5rem;
         --padding-i: 0.6rem;
         --light-bg: #eaeaea;
         --icon-grey: #b1b1b1;
     }
-} */
+}
 
 /* COMMON */
 h3 {
@@ -503,8 +503,7 @@ button {
     box-shadow:  5px  5px 6px red,
                 -5px -5px 6px red,
                  5px -5px 6px red,
-                -5px  5px 6px red;
-  
+                -5px  5px 6px red; 
 }
 
 .fa-microphone:active #chat-bar {
